@@ -8,6 +8,10 @@
     "start": "node index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
