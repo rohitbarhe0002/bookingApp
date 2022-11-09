@@ -12,7 +12,7 @@ import roomsRoute from "./routes/rooms.js"
 const app = express();
 
 
-mongoose.connect("mongodb+srv://rohit:927OyNYa3SATS3OU@cluster0.jnqxqcn.mongodb.net/?retryWrites=true&w=majority",{
+mongoose.connect(process.env.MONGODB_URL,{
     
 }).then(() => {
     console.log("db is connected");
@@ -42,6 +42,6 @@ app.use((req,res,next,err)=>{
     //     stack:err.stack,
     // })
 })
-app.listen(8000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("succesfully connected to backend");
 })
